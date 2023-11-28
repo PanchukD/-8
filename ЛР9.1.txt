@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int k;
+    cout << "Input k: ";
+    cin >> k;
+    int* arr = new int[k];
+    cout << "Input mas elements:\n";
+    for (int i = 0; i < k; ++i) {
+        cout << "Element " << i + 1 << ": ";
+        cin >> arr[i];
+    }
+    int sum = 0;
+    for (int i = 0; i < k; ++i) {
+        if (arr[i] > 5) {
+            sum += arr[i];
+        }
+    }
+    cout << "Sum elements > 5: " << sum << std::endl;
+    int count = 0;
+    for (int i = 0; i < k; ++i) {
+        if (arr[i] % k == 0) {
+            count++;
+        }
+    }
+    cout << "Number of elements in multiples: " << k << ": " << count << std::endl;
+    return 0;
+}
